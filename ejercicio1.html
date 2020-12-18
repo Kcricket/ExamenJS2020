@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function validateForm() {
+  var x = document.forms["myForm"]["fname"].value;
+  if (x != "(ccc(ccc)cc((ccc(c))))") {
+    alert("Algo ha ido mal.. Comprueba que has puesto el paréntesis en el sitio correcto");
+    return false;
+  }
+  else alert("Mu bien");
+}
+</script>
+</head>
+<body>
+
+<form name="myForm" action="/action_page.php" onsubmit="return validateForm()" method="post">
+  Name: <input type="text" name="fname">
+  <input type="submit" value="Submit">
+  <h1>Introduce: )ccc(ccc)cc((ccc(c)))( ..y saldrá error</h1>
+  <h1>Introduce: (ccc(ccc)cc((ccc(c))))  ..version correcta</h1>
+
+</form>
+
+</body>
+</html>
